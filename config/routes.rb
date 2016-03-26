@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root 'chatrooms#index'
 
+  get '/signin' => 'sessions/new', as: :sign_in
+  post '/signin' => 'sessions/create'
   get 'signup' => 'users/new', as: :sign_up
 
   # The priority is based upon order of creation: first created -> highest priority.
