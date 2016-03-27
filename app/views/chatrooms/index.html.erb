@@ -1,24 +1,16 @@
 <div class="pull left">
   <div class="sidebar">
-    <% if @logged_in? %>
     <ul>
     <% @chatrooms.each do |room| %>
       <li><%= link_to room.name.upcase, chatroom_path(id: room.id)%></li>
-    <% end %>
     </ul>
     <% end %>
-
   </div>
 </div>
- <% if logged_in? %>
- <h3>Select a Room</h3>
- <% else %>
+
+<h1>Please select a room</h1>
 <div class="center jumbotron">
-   <h4>Welcome to Slack</h4>
+    <h2>Welcome to Slack</h2>
 
-    <%= link_to "Sign up", sign_up_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Sign up now!", sign_up_path, class: "btn btn-lg btn-primary" %>
   </div>
-<% end %>
-
-
- </div>
