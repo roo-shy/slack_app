@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
 
   root 'chatrooms#index'
+  get 'signup' => 'users#new', as: :sign_up
+   post 'users' => 'users#create'
+  get '/signin' => 'sessions#new', as: :sign_in
+  post '/signin' => 'sessions#create'
+  get 'chatrooms/:id' => 'chatrooms#show', as: :chatroom
 
-  # get '/signin' => 'sessions/new', as: :sign_in
-  # post '/signin' => 'sessions/create'
-  # get 'signup' => 'users/new', as: :sign_up
+  namespace :api do
+    get "chatrooms/:id" => 'chatrooms#show'
+    post "chatrooms/:id/texts" => 'tetxts#create', as: :texts
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

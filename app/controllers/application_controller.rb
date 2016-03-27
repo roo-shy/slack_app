@@ -7,13 +7,13 @@ class ApplicationController < ActionController::Base
     @current_user = User.find_by id: session[:user_id]
   end
 
-  include SessionHelper
-
+   include SessionsHelper
+   
   def logged_in_user
     unless logged_in?
       flash[:danger] = "Please Log In First"
       redirect_to log_in
     end
-  end 
+  end
 
 end
