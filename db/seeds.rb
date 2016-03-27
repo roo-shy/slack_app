@@ -1,11 +1,13 @@
-User.create first_name: "ivanka", last_name: "tes", password: "12345678"
+
 # Seed the users
-10.times do |n|
-user = User.create first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, password: "1234567", password_confirmation: "password",
-email: Faker::Internet.email
+ivanka = User.create! first_name: "ivanka", last_name: "tes", email: "ivanka@info.com", password: "12345678"
+tuco = User.create! first_name: "tuco", last_name: "barboskin", email: "tuco@info.com", password: "12345678"
+kelly = User.create! first_name: "kelly", last_name: "smith", email: "kelly@info.com", password: "12345678"
 
-end
+# Seed the chatrooms
+ui = Chatroom.create! name: "UI Design"
+mobile = Chatroom.create! name: "Mobile Development"
 
-# Seed the chatroom
-Chatroom.create! name: "Graphic Design"
-Chatroom.create! name: "Industrial Design"
+# Seed texts
+Text.create! chatroom: ui, content: "What is the essential of the UI design?", user: ivanka
+Text.create! chatroom: mobile, content: "Here is the list of forums and discussions for iOS developers", user: kelly
