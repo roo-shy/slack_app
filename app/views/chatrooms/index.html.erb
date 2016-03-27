@@ -10,3 +10,16 @@
 
   </div>
 </div>
+ <% if logged_in? %>
+ <h3>Select a Room</h3>
+ <% else %>
+
+ <div class="center jumbotron">
+   <h4>Welcome to Slack</h4>
+
+    <%= link_to "Sign up", sign_up_path, class: "btn btn-lg btn-primary" %>
+  </div>
+<% end %>
+
+
+ </div>
