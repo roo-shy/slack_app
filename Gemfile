@@ -46,5 +46,6 @@ group :development do
 end
 
 gem 'bootstrap-sass'
-gem 'faker', '~> 1.4.3'
+gem 'faker'
+gem 'simple_form'
 gem 'react-rails', '~> 1.0'

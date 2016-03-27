@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
-  root 'chatrooms#index'
-  get 'signup' => 'users#new', as: :sign_up
+get 'sign_up' => 'users#new', as: :sign_up
    post 'users' => 'users#create'
-  get '/signin' => 'sessions#new', as: :sign_in
-  post '/signin' => 'sessions#create'
+  get '/sign_in' => 'sessions#new', as: :sign_in
+  post '/sign_in' => 'sessions#create'
   get 'chatrooms/:id' => 'chatrooms#show', as: :chatroom
+    root 'chatrooms#index'
 
   namespace :api do
     get "chatrooms/:id" => 'chatrooms#show'
