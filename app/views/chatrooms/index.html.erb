@@ -1,6 +1,4 @@
 <div class="container">
-<div class="pull left">
-  <div class="sidebar">
     <% if @current_user %>
     <ul>
     <% @chatrooms.each do |room| %>
@@ -8,17 +6,29 @@
     <% end %>
 
   </ul>
-
-  </div>
-</div>
-
 <h1>Please select a room to view</h1>
 <% else %>
 
-<div class="center jumbotron">
     <h2>Welcome to Slack</h2>
 
-    <%= link_to "Sign In", sign_in_path, class: "btn btn-lg btn-primary" %> <%= link_to "Sign Up", sign_up_path, class: "btn btn-lg btn-primary" %>
-  </div>
+    <h3>Log In</h3>
+
+    <div class = "col-md-6 col-md-offset-3">
+        <%= form_tag do %>
+        <div class = "form-group">
+          <%= label_tag :email %>
+          <%= text_field_tag :email,"", class:'form-control' %>
+        </div>
+
+        <div class = "form-group">
+          <%= label_tag :password %>
+          <%= password_field_tag :password,"", class: 'form-control' %>
+        </div>
+
+        <div class = "form-group">
+        <%= submit_tag "Log In", class:"btn btn-primary" %> or <%= link_to "Sign Up", sign_up_path %>
+      </div>
+    <% end %>
+    </div>
 <% end %>
 </div>
