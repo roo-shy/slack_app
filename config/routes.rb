@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
 
-get 'sign_up' => 'users#new', as: :sign_up
-   post 'users' => 'users#create'
-  get '/sign_in' => 'sessions#new', as: :sign_in
-  post '/sign_in' => 'sessions#create'
+  root 'chatrooms#index'
+
+  get '/users/new' => 'users#new', as: :sign_up
+  post '/users' => 'users#create', as: :users
+
+  get 'sign_in' => 'sessions#new', as: :sign_in
+  post 'sign_in' => 'sessions#create'
+  get 'sign_out' => 'sessions#delete', as: :sign_out
   get 'chatrooms/:id' => 'chatrooms#show', as: :chatroom
-    root 'chatrooms#index'
 
   namespace :api do
     get "chatrooms/:id" => 'chatrooms#show'
-    post "chatrooms/:id/texts" => 'tetxts#create', as: :texts
+    post "chatrooms/:id/texts" => 'texts#create', as: :texts
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

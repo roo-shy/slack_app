@@ -1,34 +1,32 @@
-<div class="container">
-    <% if @current_user %>
-    <ul>
+<% if @current_user %>
+  <ul>
     <% @chatrooms.each do |room| %>
-      <li><%= link_to room.name.upcase, chatroom_path(id: room.id)%></li>
+    <li><%= link_to room.name, chatroom_path(id: room.id)%></li>
     <% end %>
-
   </ul>
-<h1>Please select a room to view</h1>
-<% else %>
-
-    <h2>Welcome to Slack</h2>
-
-    <h3>Log In</h3>
-
-    <div class = "col-md-6 col-md-offset-3">
-        <%= form_tag do %>
-        <div class = "form-group">
-          <%= label_tag :email %>
-          <%= text_field_tag :email,"", class:'form-control' %>
-        </div>
-
-        <div class = "form-group">
-          <%= label_tag :password %>
-          <%= password_field_tag :password,"", class: 'form-control' %>
-        </div>
-
-        <div class = "form-group">
-        <%= submit_tag "Log In", class:"btn btn-primary" %> or <%= link_to "Sign Up", sign_up_path %>
-      </div>
     <% end %>
+  <% if @current_user %>
+  <h1>Please select a room to view</h1>
+<% else %>
+<h2>Welcome to Slack</h2>
+
+  <h3>Log In</h3>
+
+    <%= form_tag do %>
+    <div class="form-group">
+      <%= label_tag :email %>
+      <%= text_field_tag :email,"", class:'form-control' %>
     </div>
-<% end %>
-</div>
+
+    <div class="form-group">
+      <%= label_tag :password %>
+      <%= password_field_tag :password,"", class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= submit_tag "Log In", class:"btn btn-primary" %>
+      or
+      <%= link_to "Sign Up", sign_up_path %>
+    </div>
+    <% end %>
+    <% end %>

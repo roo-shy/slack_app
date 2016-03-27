@@ -1,5 +1,7 @@
 class Api::ChatroomsController < ApplicationController
+
+
   def show
-    @chatroom = Chatroom.find params [:id]
+    @chatroom = Chatroom.find params[:id]
   end
 end
