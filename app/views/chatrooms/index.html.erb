@@ -1,2 +1,12 @@
-<h1>Chatrooms#index</h1>
-<p>Find me in app/views/chatrooms/index.html.erb</p>
+<div class="pull left">
+  <div class="sidebar">
+    <% if logged_in? %>
+    <ul>
+    <% @chatrooms.each do |room| %>
+      <li><%= link_to room.name.upcase, chatroom_path(id: room.id)%></li>
+    <% end %>
+    </ul>
+    <% end %>
+
+  </div>
+</div>
