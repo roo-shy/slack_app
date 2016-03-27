@@ -1,8 +1,10 @@
+<div class="container">
 <%= simple_form_for @user do |u| %>
-<%= u.input :first_name %>
-<%= u.input :last_name %>
-<%= u.input :email %>
-<%= u.input :password %>
-<%= u.input :password_confirmation %>
+<%= u.input :first_name,input_html: {class: "form-control"}%>
+<%= u.input :last_name,input_html: {class: "form-control"}%>
+<%= u.input :email,input_html: {class: "form-control"}%>
+<%= u.input :password,input_html: {class: "form-control"}%>
+<%= u.input :password_confirmation,input_html: {class: "form-control"}%>
 <%= u.submit "Sign Up", class: "btn btn-primary btn-block btn-lg" %>
 <% end %>
+</div>
