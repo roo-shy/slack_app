@@ -46,3 +46,4 @@ group :development do
 end
 
 gem 'bootstrap-sass'
+gem 'faker', '~> 1.4.3'
