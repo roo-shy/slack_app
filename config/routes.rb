@@ -12,7 +12,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     get "chatrooms/:id" => 'chatrooms#show'
-    post "chatrooms/:id/texts" => 'texts#create', as: :texts
+    get 'chatrooms' => 'chatrooms#index'
+    get 'texts' => 'texts#index'
+    post "chatrooms/:id/texts" => 'texts#create'
+
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

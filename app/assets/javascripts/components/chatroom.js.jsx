@@ -20,22 +20,23 @@ var Chatroom = React.createClass({
 
   componentDidMout(){
     this.fetchTexts();
-    this.textInterval = setInterval(this.fetchTexts,3000);
+    this.textInterval = setInterval(this.fetchTexts, 3000);
   },
 
-  componentWillMount(){
+  componentWillUnmount(){
     clearInterval(textInterval);
   },
 
   render: function() {
     return <div>
+     {this.state.chatroom.name} ({this.state.chatroom.texts.length})
     <div className="texts">
     {this.state.chatroom.texts.map(function(text){
-      return <Text text={text}/>
+      return <Text text={text}></Text>
     })}
     </div>
 
-    <NewText chatroom = {this.state.chatroom}/>
-    </div>
+    <TextForm chatroom={this.state.chatroom}></TextForm>
+    </div>;
   }
 });

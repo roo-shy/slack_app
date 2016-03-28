@@ -1,8 +1,12 @@
-<div class="chatrooms">
-
-  <%= @chatroom.name%>
-
+<div class="container">
+  <p>
+  Hi <%= @current_user.email %>
+</p>
+<h2>Welcome to <%= @chatroom.name%></h2>
 </div>
 
+<%= react_component 'TextList' %>
 
-<%= react_component "Chatroom", {chatroom: @chatroom} %>
+
+
+</div>
