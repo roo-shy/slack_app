@@ -1,5 +1,8 @@
-   <ul>
-      <% @chatrooms.each do |chatroom| %>
-        <li><%= link_to chatroom.name, chatroom_path(id: chatroom.id) %>
-      <% end %>
-    </ul>
+<div class="chatrooms">
+
+  <%= @chatroom.name%>
+
+</div>
+
+
+<%= react_component "Chatroom", {chatroom: @chatroom} %>
