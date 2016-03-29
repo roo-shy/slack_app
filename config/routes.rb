@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     get "chatrooms/:id" => 'chatrooms#show'
     get 'chatrooms' => 'chatrooms#index'
     get 'texts' => 'texts#index'
-    post "chatrooms/:id/texts" => 'texts#create'
+    post "chatrooms/:id" => 'chatrooms#create'
 
   end
 
