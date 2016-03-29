@@ -8,14 +8,15 @@ Rails.application.routes.draw do
   get 'sign_in' => 'sessions#new', as: :sign_in
   post 'sign_in' => 'sessions#create'
   get 'sign_out' => 'sessions#delete', as: :sign_out
+  get 'chatrooms/new' => 'chatrooms#new', as: :new_chatroom
+  post "chatrooms" => 'chatrooms#create', as: :chatrooms
   get 'chatrooms/:id' => 'chatrooms#show', as: :chatroom
 
   namespace :api do
     get "chatrooms/:id" => 'chatrooms#show'
     get 'chatrooms' => 'chatrooms#index'
     get 'texts' => 'texts#index'
-    post "chatrooms" => 'chatrooms#create'
-    post 'texts' => 'texts#create'
+    post 'texts/:id' => 'texts#create'
 
   end
 

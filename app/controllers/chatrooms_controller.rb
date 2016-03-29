@@ -1,7 +1,7 @@
 class ChatroomsController < ApplicationController
 before_action :authenticate_user!
   def index
-    @chatrooms = Chatroom.all
+   @chatrooms = Chatroom.all
   end
 
   def show
@@ -14,8 +14,7 @@ before_action :authenticate_user!
   end
 
   def create
-  @chatroom = Chatroom.new
-  @chatroom.text = params[:chatroom][:text]
+  @chatroom = Chatroom.new params.require(:chatroom).permit(:name)
   @chatroom.user = @current_user
     if @chatroom.save
       redirect_to root_path

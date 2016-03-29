@@ -6,12 +6,14 @@ var Form = React.createClass({
     // Save text
     // POST json date to API endpoint
     var theJSON = {
-      texts: {
-        content: theContent
+      text: {
+        content: theText
       }
     };
 
-    fetch("/api/texts.json", {
+    var route = ("/api/texts/" + this.props.chatroom_id + ".json");
+
+    fetch(route, {
       method: 'post',
       headers: {
         "Content-type": "application/json"
@@ -22,15 +24,14 @@ var Form = React.createClass({
       return response.json();
     }).then(function(data){
       // refresh post list in room (3 sec interval after initial refresh at render)
-      component.refs.convo.value = "";
+
     })
 
   },
   render(){
     return <form onSubmit={this.theForm}>
-      <input type="text" ref="convo"/>
-
-    <button>Send</button>
+      <input type="text" ref="convo" className="form-control"/>
+      <button className="btn btn-primary">Send</button>
   </form>
   }
 })
