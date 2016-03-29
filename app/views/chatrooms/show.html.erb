@@ -1,12 +1,14 @@
-<div class="container">
-  <p>
-  Hi <%= @current_user.email %>
-</p>
-<h2>Welcome to <%= @chatroom.name%></h2>
-</div>
 
+  <div class="row">
+     <div class="col-md-2">
+         <p style="font-size:15px;"><em><%= @current_user.first_name %></em></p>
+       <p style="font-size:16px;"><em> # <%= @chatroom.name%></em></p>
+
+
+</div>
+<div class="col-md-8">
 <%= react_component 'TextList' %>
 
 
-
+</div>
 </div>

@@ -1,10 +1,13 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
-// .texts {
-//   overflow: scroll;
-//   padding: 10px 0;
-//   border-bottom: 1px solid $gray-lighter;
-//   height:600px;
-//   width:400px;
-// }
+.col-md-2 {
+  background: #4D394B;
+  color:#AB9BA9;
+  height:900px;
+  padding: 30px;
+}
+
+.container{
+  padding: 30px;
+}

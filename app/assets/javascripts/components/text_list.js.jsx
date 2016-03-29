@@ -36,7 +36,6 @@ var TextList = React.createClass({
 render: function() {
   console.log('hello rendderrr?')
     return <div className="container">
-     <h3>Textssss</h3>
     {this.state.texts.map(function(text){
       return <blockquote key={text.id}>{text.content}</blockquote>
     })}
