@@ -4,15 +4,14 @@ before_action :authenticate_user!
     @chatrooms = Chatroom.all
   end
 
-  def new
-    @chatroom = Chatroom.new
-  end
-
   def show
     @chatrooms = Chatroom.all
     @chatroom = Chatroom.find(params[:id])
   end
 
+  def new
+    @chatroom = Chatroom.new
+  end
 
   def create
   @chatroom = Chatroom.new
