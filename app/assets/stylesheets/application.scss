@@ -8,6 +8,19 @@
   padding: 30px;
 }
 
-.container{
-  padding: 30px;
+
+.wrapper{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background:#4D394B;
+  padding: 220px;
+}
+
+.form-group{
+  color:#FFFFFF;
+}
+
+.form-control{
+  background: rgb(250, 255, 189);
 }
