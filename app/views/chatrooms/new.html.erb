@@ -1,4 +1,10 @@
-<div class="container">
+<div class="row">
+  <div class="col-md-2"><p>
+    <i class="fa fa-slack" style="background: white; padding: 3px; color: #4D394B; font-size: 23px; border-radius: 5px;"></i>
+  </p>
+  <p style="font-size:16px;"><em><%= link_to '#Channels', root_path, style: "color: #AB9BA9;"%></em></p>
+    </div>
+    <div class="col-md-8">
 <%= form_for @chatroom do |f| %>
     <div class="">
       <%= f.label :name %>

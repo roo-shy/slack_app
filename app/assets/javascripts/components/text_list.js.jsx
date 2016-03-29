@@ -1,10 +1,12 @@
 var TextList = React.createClass({
 
- fetchTextsTimer: null,
+  fetchTextsTimer: null,
 
   getInitialState(){
     return {
-      texts: []
+      texts: [],
+      pageSize: 13,
+      page: 0
     }
   },
 
@@ -17,6 +19,15 @@ var TextList = React.createClass({
     clearInterval(this.fetchTextsTimer);
   },
 
+  prevPage(e){
+    e.preventDefault()
+    this.setState({page: this.state.page-1})
+  },
+
+  nextPage(e){
+    e.preventDefault()
+    this.setState({page: this.state.page+1})
+  },
 
   fetchTexts(){
     var component = this;
@@ -27,18 +38,35 @@ var TextList = React.createClass({
       })
       .then(function(jsonData){
           console.log(jsonData);
-        component.setState({
-          texts: jsonData.texts
-        })
+          component.setState({
+            texts: jsonData.texts
+          })
       })
   },
 
-render: function() {
-  console.log('hello rendderrr?')
+  render: function() {
+    var page = this.state.page,
+        size = this.state.pageSize,
+        texts = this.state.texts,
+        prevLink = <a href="#" onClick={this.prevPage}>prev page</a>,
+        nextLink = <a href="#" onClick={this.nextPage}>next page</a>,
+        maxPage = Math.ceil(texts.length / size) - 1
+
+    // console.log(
+    //   this.state,
+    //   texts.slice(page*size, (page+1)*size)
+    // )
+
     return <div className="container">
-    {this.state.texts.map(function(text){
-      return <blockquote key={text.id}>{text.content}</blockquote>
-    })}
+      {texts.slice(page*size, (page+1)*size).map(function(text){
+        return <blockquote key={text.id}>{text.content}</blockquote>
+      })}
+
+      <div>
+        {page !== 0 ? prevLink : ''}
+        
+        {page === maxPage ? '' : nextLink}
+      </div>
     </div>;
 
   }
