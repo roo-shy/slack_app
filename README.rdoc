@@ -1,4 +1,19 @@
-== README
+== Slack. ReactJS 
+
+#Learning Objectives
+
+* Demonstrate knowledge of JavaScript proficiently
+
+* Demonstrate expertise in data from forms to params (and APIs sending params)
+
+* Demonstrate ability to update data from server without page loads
+
+#Performance Objectives
+
+* React
+
+*JSON API Endpoints
+
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
