@@ -1,22 +1,33 @@
-
 <div class="row">
   <div class="col-md-2">
-    <p><i class="fa fa-slack" style="background: white; padding: 3px; color: #4D394B; font-size: 23px; border-radius: 5px;"></i></p>
-    <p style="font-size:16px;"><em>#Channels</em></p>
-</div>
-<div class="col-md-8">
-  <% if @current_user %>
+    <p>
+      <i class="fa fa-slack" style="background: white; padding: 3px; color: #4D394B; font-size: 23px; border-radius: 5px;"></i>
+    </p>
+    <p style="font-size:16px;">
+      <em>#Channels</em>
+    </p>
+  </div>
+  <div class="col-md-8">
+    <% if @current_user %>
 
-  <p style="font-size:20px; color:#333333;">
-    <em>
-      <% @chatrooms.each do |chatroom| %>
-  <%= link_to chatroom.name, chatroom_path(id: chatroom.id), style: "color:#AB9BA9;"%>
-    <% end %></em></p>
-<% end %>
+    <p style="font-size:20px; color:#333333;">
+      <em>
+        <% @chatrooms.each do |chatroom| %>
+        <%= link_to chatroom.name, chatroom_path(id: chatroom.id), style: "color:#AB9BA9;"%>
+        <% end %></em>
+    </p>
+    <% end %>
 
-  <% if @current_user %>
-<h4 style="font-size:25px; color: #333333;"><em>Please select a room to view or add a new one </em></h4>
+    <% if @current_user %>
+    <h4 style="font-size:25px; color: #333333;">
+      <em>Please select a room to view or add a new one
+      </em>
+        <%= link_to "Add New Room", new_chatroom_path, class: "btn btn-success"%>
+    </h4>
 
-<% end %>
-</div>
+    <%= react_component 'TextList'%>
+
+    <% end %>
+
+  </div>
 </div>

@@ -1,0 +1,11 @@
+<div class="container">
+<%= form_for @chatroom do |f| %>
+    <div class="">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="">
+      <%= f.submit class: "btn btn-success", value: "Add a Room" %>
+      <% end %>
+</div>
