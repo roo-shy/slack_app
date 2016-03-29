@@ -1,9 +1,12 @@
+
+<div class="row">
+  <div class="col-md-2">
 <% if @current_user %>
-<ul>
+
   <% @chatrooms.each do |chatroom| %>
-  <li><%= link_to chatroom.name, chatroom_path(id: chatroom.id)%></li>
+<%= link_to chatroom.name, chatroom_path(id: chatroom.id)%>
   <% end %>
-</ul>
+
 <% end %>
 <% if @current_user %>
 <h4>Please select a room to view</h4>
@@ -30,3 +33,5 @@
 </div>
 <% end %>
 <% end %>
+</div>
+</div>

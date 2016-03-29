@@ -1,21 +1,21 @@
-
 <div class="wrapper">
-<div class = "col-md-6 col-md-3">
-  <h3 style="color:#FFFFFF; font-size:27px;">Log In to Slackfaker</h3>
+  <div class="col-md-6 col-md-3">
+    <h3 style="color:#FFFFFF; font-size:27px;">Log In to Slackfaker</h3>
     <%= form_tag do %>
-    <div class = "form-group">
+    <div class="form-group">
       <%= label_tag :email %>
       <%= text_field_tag :email,"", class:'form-control' %>
     </div>
 
-    <div class = "form-group">
+    <div class="form-group">
       <%= label_tag :password %>
       <%= password_field_tag :password,"", class: 'form-control' %>
     </div>
 
-    <div class = "form-group">
-    <%= submit_tag "Log In", class:"btn btn-primary" %>   <%= link_to "Sign Up", sign_up_path, style:"color:#FFFFFF" %>
+    <div class="form-group">
+    <p style="font-size:15px;">Your team already uses Slack? <%= submit_tag "Sign In", class:"btn btn-primary" %> <%= link_to "Sign Up", sign_up_path, style:"color:#FFFFFF", class:"btn btn-primary" %></p>
+
+    </div>
+    <% end %>
   </div>
-<% end %>
-</div>
 </div>
