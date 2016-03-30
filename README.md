@@ -12,7 +12,7 @@
 
 * React
 
-*JSON API Endpoints
+* JSON API Endpoints
 
 #A Rails 4.2.4 utilizing
 
