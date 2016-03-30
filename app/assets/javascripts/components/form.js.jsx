@@ -30,8 +30,12 @@ var Form = React.createClass({
   },
   render(){
     return <form onSubmit={this.theForm}>
-      <input type="text" ref="convo" className="form-control"/>
+    <div className="form-group">
+     <input type="text" ref="convo" className="form-control"/>
+    </div> 
+    <div className="form-group">
       <button className="btn btn-primary">Send</button>
+    </div>
   </form>
   }
 })

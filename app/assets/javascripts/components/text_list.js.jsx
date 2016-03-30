@@ -64,7 +64,7 @@ var TextList = React.createClass({
 
       <div>
         {page !== 0 ? prevLink : ''}
-        
+
         {page === maxPage ? '' : nextLink}
       </div>
     </div>;

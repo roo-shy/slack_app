@@ -1,5 +1,7 @@
 class ChatroomsController < ApplicationController
+
 before_action :authenticate_user!
+
   def index
    @chatrooms = Chatroom.all
   end
@@ -22,5 +24,4 @@ before_action :authenticate_user!
       render :new
     end
   end
-
 end

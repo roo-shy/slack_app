@@ -3,6 +3,10 @@
     <p>
       <i class="fa fa-slack" style="background: white; padding: 3px; color: #4D394B; font-size: 23px; border-radius: 5px;"></i>
     </p>
+    <p style="font-size:15px;">
+      <em><%= @current_user.first_name %></em>
+    </p>
+      <p style="font-size:16px;"><em><%= link_to 'Sign Out', sign_out_path, method: :delete, style: "color: #AB9BA9;" %></em></p>
     <p style="font-size:16px;">
       <em>#Channels</em>
     </p>
