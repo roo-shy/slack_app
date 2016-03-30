@@ -59,7 +59,7 @@ var TextList = React.createClass({
 
     return <div className="container">
       {texts.slice(page*size, (page+1)*size).map(function(text){
-        return <blockquote key={text.id}>{text.content}</blockquote>
+        return <blockquote key={text.id}>{text.user.first_name} {text.user.last_name}: {text.content}</blockquote>
       })}
 
       <div>

@@ -7,7 +7,8 @@ json.chatroom do
     json.created_at text.created_at
      json.user do
        json.id text.user.id
-       json.name text.user.email
+       json.first_name text.user.first_name
+       json.last_name text.user.last_name
      end
   end
 end
