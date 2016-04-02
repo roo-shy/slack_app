@@ -45,7 +45,9 @@ group :development do
   gem 'spring'
   gem 'rails_12factor'
 end
-
+gem "refile", require: "refile/rails"
+gem "refile-mini_magick"
+gem 'refile-postgres'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'underscore-rails'
