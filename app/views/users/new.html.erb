@@ -4,7 +4,10 @@
 <%= simple_form_for @user do |u| %>
 
   <div class="form-group">
-<%= u.input :name,input_html: {class: "form-control"}%>
+<%= u.input :first_name,input_html: {class: "form-control"}%>
+</div>
+  <div class="form-group">
+<%= u.input :last_name,input_html: {class: "form-control"}%>
 </div>
   <div class="form-group">
 <%= u.input :email,input_html: {class: "form-control"}%>
