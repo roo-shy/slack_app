@@ -6,6 +6,7 @@ json.texts @texts do |text|
   json.user do
     json.id text.user.id
     json.first_name text.user.first_name
-    json.last_name text.user.last_name
+    json.name text.user.name
+    json.photo text.user.photo
   end
 end

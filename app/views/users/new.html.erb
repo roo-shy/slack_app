@@ -1,12 +1,10 @@
 <div class="wrapper">
 <div class = "col-md-6 col-md-3">
+  <h3 style="color:#FFFFFF; font-size:27px;">Sign Up Here</h3>
 <%= simple_form_for @user do |u| %>
 
   <div class="form-group">
-<%= u.input :first_name,input_html: {class: "form-control"}%>
-</div>
-  <div class="form-group">
-<%= u.input :last_name,input_html: {class: "form-control"}%>
+<%= u.input :name,input_html: {class: "form-control"}%>
 </div>
   <div class="form-group">
 <%= u.input :email,input_html: {class: "form-control"}%>
