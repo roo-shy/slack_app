@@ -69,8 +69,5 @@ var TextList = React.createClass({
       </div>
 
     </div>;
-
-
-
   }
 });
