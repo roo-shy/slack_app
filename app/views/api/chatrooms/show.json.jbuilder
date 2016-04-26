@@ -1,14 +1,13 @@
-json.chatroom do |chatroom|
-  json.name chatroom.name
-  json.texts chatroom.texts do
+json.chatroom do
+  json.id @chatroom.id
+  json.chatroom_name @chatroom.chatroom_name
+  json.texts @chatroom.texts do |text|
     json.id text.id
     json.content text.content
-    json.created_at text.created_at
-     json.user do
-       json.id text.user.id
-       json.first_name text.user.first_name
-       json.last_name text.user.last_name
-       json.photo text.user.photo
-     end
-  end
+      json.user do
+        json.id text.user.id
+        json.first_name text.user.first_name
+        json.photo_id text.user.photo_id
+      end
+    end
 end
