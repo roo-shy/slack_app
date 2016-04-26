@@ -1,3 +1,9 @@
+def upload_image(photo_name)
+  backend = Refile.store
+  path = File.join(Rails.root, "test/fixtures/#{photo_name}.png")
+  backend.upload(File.new(path))
+end
+
 if User.count == 0
   user = User.new
   user.first_name = "ivanka"
