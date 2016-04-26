@@ -1,6 +1,6 @@
 def upload_image(photo_name)
   backend = Refile.store
-  path = File.join(Rails.root, "test/fixtures/#{photo_name}.png")
+  path = File.join(Rails.root, "test/fixtures/#{photo_name}.jpg")
   backend.upload(File.new(path))
 end
 
@@ -10,8 +10,7 @@ if User.count == 0
   user.last_name = "tessa"
   user.email = "ivanka@info.com"
   user.password = "12345678"
-  File.open("#{Rails.root}/app/assets/images/2.jpg", "rb") do |file|
-   user.photo = file
+  user.photo = photo_id: upload_image('1').id
  end
  user.save
 
@@ -21,8 +20,7 @@ if User.count == 0
  user.last_name = "barboskin"
  user.email = "tuco@info.com"
  user.password = "12345678"
- File.open("#{Rails.root}/app/assets/images/3.png", "rb") do |file|
-  user.photo = file
+ user.photo = photo_id: upload_image('2').id
 end
 user.save
 
@@ -31,8 +29,7 @@ user.first_name = "kelly"
 user.last_name = "watson"
 user.email = "kelly@info.com"
 user.password = "12345678"
-File.open("#{Rails.root}/app/assets/images/4.png", "rb") do |file|
- user.photo = file
+user.photo = photo_id: upload_image('3').id
 end
 user.save
 
@@ -41,8 +38,7 @@ user.first_name = "sasha"
 user.last_name = "ziberov"
 user.email = "sasha@info.com"
 user.password = "12345678"
-File.open("#{Rails.root}/app/assets/images/1.jpg", "rb") do |file|
- user.photo = file
+user.photo = photo_id: upload_image('4').id
 end
 user.save
 end
