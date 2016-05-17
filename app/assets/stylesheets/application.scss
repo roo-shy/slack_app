@@ -1,6 +1,5 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-@import 'sessions';
 
 .col-md-2 {
   background: #4D394B;
@@ -10,12 +9,13 @@
 }
 
 
-.container{
+.wrapper{
   display: flex;
   justify-content: center;
   background:#4D394B;
   padding: 280px;
 }
+
 
 .signin{
   padding: 100px;
