@@ -1,29 +1,29 @@
-<div class="wrapper">
-  <div class="signin">
-  <h3 style="color:#FFFFFF; font-size:27px;">Sign Up</h3>
-<%= simple_form_for @user do |u| %>
+<div class="welcome-container">
+  <div class="content">
 
-  <div class="form-group">
-<%= u.input :first_name,input_html: {class: "form-control"}%>
-</div>
-  <div class="form-group">
-<%= u.input :last_name,input_html: {class: "form-control"}%>
-</div>
-  <div class="form-group">
-<%= u.input :email,input_html: {class: "form-control"}%>
-</div>
-  <div class="form-group">
-<%= u.input :password,input_html: {class: "form-control"}%>
-</div>
-  <div class="form-group">
-<%= u.input :password_confirmation,input_html: {class: "form-control"}%>
-</div>
-  <div class="form-group">
-<%= u.attachment_field :photo, class: "form-control-file" %>
- </div>
-  <div class="form-group">
-<%= u.submit "Sign Up", class: "btn btn-primary btn-block btn-lg" %>
-</div>
+    <div class="signup">
+      <% if @user.errors.any? %>
+      <%= pluralize(@user.errors.count, 'error') %> need your attention.
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+    <center>
+<%= form_for @user do |f| %>
+<%= f.text_field :first_name,placeholder:"First Name", class:"signupfield"%>
+<%= f.text_field :last_name,placeholder:"Last Name", class:"signupfield"%>
+<%= f.text_field :email,placeholder:"Email", class:"signupfield"%>
+<%= f.text_field :password,placeholder:"Password", class:"passwordfield"%>
+<%= f.attachment_field :photo, class: "browse" %>
+<%= f.submit "Sign Up", class: "signinsubmit" %>
 <% end %>
+<p class="signupline">
+  Already have an account?
+  <%= link_to "Sign In", root_path, class:"signuplink" %>
+</p>
+</center>
+</div>
 </div>
 </div>
