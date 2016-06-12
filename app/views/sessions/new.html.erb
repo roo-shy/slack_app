@@ -1,22 +1,17 @@
 <div class="welcome-container">
-  <div class="signinform">
-<h3 style="color:#FFFFFF; font-size:27px;">Log In</h3>
+  <div class="content">
+
+
+  <div class="signin">
      <%= form_tag do %>
-    <div class="form-group">
-      <%= label_tag :email %>
-      <%= text_field_tag :email,"", class:'form-control' %>
+     <div class="field-container">
+    <%= text_field_tag :email, nil, placeholder: 'Email', class:'emailfield' %>
+      <%= password_field_tag :password, nil, placeholder: 'Passowrd', class: 'passwordfield' %>
     </div>
-
-    <div class="form-group">
-      <%= label_tag :password %>
-      <%= password_field_tag :password,"", class: 'form-control' %>
-    </div>
-
-    <div class="form-group">
-    <p style="font-size:15px;">Your team already uses Slack? <%= submit_tag "Sign In", class:"btn btn-primary" %> <%= link_to "Sign Up", sign_up_path, style:"color:#FFFFFF", class:"btn btn-primary" %></p>
-
-    </div>
-    <% end %>
+     <%=submit_tag "Welcome Back", class:'signinsubmit'%>
+     <% end %>
+     <p style="font-size:15px;">New to Slack?<%= link_to "Sign Up", sign_up_path, style:"color:#FFFFFF", class:"signup" %></p>
 
       </div>
+        </div>
 </div>
