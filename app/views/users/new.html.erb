@@ -15,7 +15,7 @@
 <%= f.text_field :first_name,placeholder:"First Name", class:"signupfield"%>
 <%= f.text_field :last_name,placeholder:"Last Name", class:"signupfield"%>
 <%= f.text_field :email,placeholder:"Email", class:"signupfield"%>
-<%= f.text_field :password,placeholder:"Password", class:"passwordfield"%>
+<%= f.password_field :password,placeholder:"Password", class:"signupfield"%>
 <%= f.attachment_field :photo, class: "browse" %>
 <%= f.submit "Sign Up", class: "signinsubmit" %>
 <% end %>
