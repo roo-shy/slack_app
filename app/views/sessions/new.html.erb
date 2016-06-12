@@ -7,10 +7,12 @@
         <%= text_field_tag :email, nil, placeholder: 'Email', class:'emailfield' %>
         <%= password_field_tag :password, nil, placeholder: 'Passowrd', class: 'passwordfield' %>
       </div>
+        <center>
       <%=submit_tag "Welcome Back", class:'signinsubmit'%>
+    </center>
       <% end %>
       <p style="font-size:15px;">New to Slack?
-        <%= link_to "Sign Up", sign_up_path, style:"color:#FFFFFF", class:"signup" %></p>
+        <%= link_to "Sign Up", sign_up_path, class:"signuplink" %></p>
 
     </div>
   </div>
