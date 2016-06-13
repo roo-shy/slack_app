@@ -16,7 +16,7 @@
   padding: 280px;
 }
 
-.welcome-container {
+.container {
   margin:0px;
   background-image: url('galaxy_universe-normal.jpg');
   background-size:cover;
@@ -37,7 +37,7 @@
   width:50%;
   height:80%;
   margin-top:180px;
-  background-color: rgba(236, 240, 241, 0.6);
+  background-color: rgba(350, 240, 241, 0.5);
   border-radius: 10px;
   line-height: 50px;
   display:flex;
@@ -49,7 +49,7 @@
 .signup {
   width:50%;
   height:80%;
-  background-color: rgba(236, 240, 241, 0.6);
+  background-color: rgba(350, 240, 241, 0.5);
   margin-top:180px;
   border-radius: 10px;
   line-height: 50px;
@@ -61,17 +61,16 @@
 }
 
 
-.signupfield {
-font-family: 'Lato', sans-serif;
+.row {
 font-size: 18px;
 width:75%;
 color:rgba(189, 195, 199, 1.0);
 font-weight: lighter;
 border-radius:5px;
 border:2px solid white;
-margin-top: 7px;
-margin-right: 10px;
+margin-left: 50px;
 margin-top:20px;
+display: inline-block;
 }
 
 .field-container {
@@ -82,28 +81,8 @@ margin-top:20px;
   margin-bottom:10px;
 }
 
-.emailfield {
-font-family: 'Lato', sans-serif;
-font-size: 18px;
-color:rgba(189, 195, 199, 1.0);
-font-weight: lighter;
-border-radius:5px;
-border:2px solid white;
-margin-right:10px;
-}
-
-.passwordfield {
-font-family: 'Lato', sans-serif;
-font-size: 18px;
-color:rgba(189, 195, 199, 1.0);
-font-weight: lighter;
-border-radius:5px;
-border:2px solid white;
-
-}
 
 .signinsubmit {
-  font-family: 'Lato', sans-serif;
   font-size: 25px;
   background-color: #34495e;
   border-radius: 5px;
@@ -111,7 +90,7 @@ border:2px solid white;
   border:2px solid #34495e;
   width:78%;
   margin-left: 5px;
-
+  margin-top: 10px;
 }
 
 .signinsubmit:hover {
@@ -128,7 +107,6 @@ border:2px solid white;
 }
 
 .browse {
-  font-family: 'Lato', sans-serif;
   font-size: 18px;
   border-radius: 5px;
   height:40px;
@@ -145,4 +123,35 @@ border:2px solid white;
 
 .col-md-8{
   margin-top: 30px;
+}
+
+@media only screen and (max-width: 415px) {
+
+   .signupform {
+     height:80vh;
+     width:95%;
+   }
+
+   .signup {
+     width:80%;
+     height:80%;
+   }
+
+   .signin {
+     width:100%;
+     height:80%;
+   }
+
+   .row {
+     width:85%;
+     margin-left: 20px;
+     margin-top:20px;
+   }
+   .signinsubmit {
+     font-size: 16px;
+   }
+   .logo-container2 {
+     margin-bottom: 100px;
+   }
+
 }
