@@ -1,6 +1,8 @@
 <div class="container">
   <div class="content">
-
+    <p>
+      <i class="fa fa-slack" style="background: white; padding: 3px; color: #4D394B; font-size: 23px; border-radius: 5px;"></i>
+    </p>
     <div class="signup">
       <% if @user.errors.any? %>
       <%= pluralize(@user.errors.count, 'error') %> need your attention.
