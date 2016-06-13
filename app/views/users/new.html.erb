@@ -12,11 +12,11 @@
     <% end %>
     <center>
 <%= form_for @user do |f| %>
-<%= f.text_field :first_name,placeholder:"First Name", class:"row"%>
-<%= f.text_field :last_name,placeholder:"Last Name", class:"row"%>
-<%= f.text_field :email,placeholder:"Email", class:"row"%>
-<%= f.password_field :password,placeholder:"Password", class:"row"%>
-<%= f.attachment_field :photo, class: "browse" %>
+<%= f.text_field :first_name,placeholder:"First Name", class:"signuprow"%>
+<%= f.text_field :last_name,placeholder:"Last Name", class:"signuprow"%>
+<%= f.text_field :email,placeholder:"Email", class:"signuprow"%>
+<%= f.password_field :password,placeholder:"Password", class:"signuprow"%>
+<%= f.attachment_field :photo, class: "bsignuprowse" %>
 <%= f.submit "Sign Up", class: "signinsubmit" %>
 <% end %>
 <p class="signupline">
