@@ -41,7 +41,6 @@
 .signin {
   width:50%;
   height:80%;
-  margin-top:160px;
   background-color: rgba(350, 240, 241, 0.5);
   border-radius: 10px;
   line-height: 50px;
@@ -55,7 +54,7 @@
   width:50%;
   height:80%;
   background-color: rgba(350, 240, 241, 0.5);
-  margin-top:160px;
+  margin-top:70px;
   border-radius: 10px;
   line-height: 50px;
   display:flex;
@@ -142,42 +141,17 @@ display: inline-block;
   margin-top: 30px;
 }
 
-@media only screen and (max-width: 415px) {
 
-   .signupform {
-     height:80vh;
-     width:95%;
-   }
+.element {
+  color:white;
+  font-family: 'Lato', sans-serif;
+  font-size: 50px;
+  width:100%;
+  max-width: 620px;
+}
 
-   .signup {
-     width:100%;
-     height:80%;
-     margin-top:80px;
-   }
-
-   .signin {
-     width:100%;
-     height:80%;
-     margin-top:80px;
-   }
-
-   .row {
-     width:85%;
-     margin-left: 20px;
-     margin-top:20px;
-   }
-
-   .signuprow {
-    margin-left: 10px;
-   }
-
-   .signinsubmit {
-     font-size: 16px;
-   }
-   .logo {
-     margin-left: 0;
-   }
-
+.typed-cursor {
+  color:rgba(236, 240, 241, 0.0)
 }
 
 .typed-cursor{
@@ -200,4 +174,47 @@ display: inline-block;
     0% { opacity:1; }
     50% { opacity:0; }
     100% { opacity:1; }
+}
+@media only screen and (max-width: 415px) {
+
+   .signupform {
+     height:80vh;
+     width:95%;
+   }
+
+   .signup {
+     width:100%;
+     height:80%;
+     margin-top:80px;
+   }
+
+   .signin {
+     width:100%;
+     height:80%;
+   }
+
+   .element {
+     color:white;
+     font-family: 'Lato', sans-serif;
+     font-size: 40px;
+     padding: 20px;
+   }
+
+   .row {
+     width:85%;
+     margin-left: 20px;
+     margin-top:20px;
+   }
+
+   .signuprow {
+    margin-left: 10px;
+   }
+
+   .signinsubmit {
+     font-size: 16px;
+   }
+   .logo {
+     margin-left: 0;
+   }
+
 }
