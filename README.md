@@ -1,4 +1,4 @@
-# slack_app. ReactJS 
+# ReactJS with Rails, JSON API
 
 #Learning Objectives
 
