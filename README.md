@@ -1,24 +1,22 @@
-# ReactJS with Rails, JSON API
+# ReactJS with Rails and JSON API
 
-#Learning Objectives
+###Learning Objectives:
 
-* Demonstrate knowledge of JavaScript proficiently
+* Demonstrates expertise in data from forms to params (and APIs sending params)
 
-* Demonstrate expertise in data from forms to params (and APIs sending params)
+* Demonstrates ability to update data from server without page loads
 
-* Demonstrate ability to update data from server without page loads
-
-#Performance Objectives
+###Performance Objectives:
 
 * React
 
 * JSON API Endpoints
 
-#A Rails 4.2.4 utilizing
+###Rails 4.2.4 utilizing
 
 * react-rails
 
-* a JSON API
+* JSON API
 
 * has-secure-password
 
