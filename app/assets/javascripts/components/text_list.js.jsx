@@ -1,8 +1,8 @@
-var TextList = React.createClass({
+var TextList = React.createClass ({
 
   fetchTextsTimer: null,
 
-  getInitialState(){
+  getInitialState() {
     return {
       texts: [],
       pageSize: 13,
@@ -10,7 +10,7 @@ var TextList = React.createClass({
     }
   },
 
-  componentDidMount(){
+  componentDidMount() {
     this.fetchTexts();
     this.fetchTextsTimer = setInterval(this.fetchTexts, 3000);
   },
